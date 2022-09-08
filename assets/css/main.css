@@ -1,0 +1,561 @@
+/*
+Couleurs
+dark-red:  #660624
+beige: #FCDAB6
+light-white: #F7F8F6
+light-bleu: #BDDAD5
+rose: F25E6A
+pomegranate: #f44336
+
+
+*/
+
+
+/******** General rules ***********/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-weight: 400;
+    line-height: 1.5625;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    color: #660624;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.main_section {
+    padding: 7em;
+}
+
+.beige_background {
+    background-color: #fcdab64d;
+    /* decline transparency 0.3 color  #fcdab6 */
+
+}
+
+.dark-red_background {
+    background-color: rgb(102, 6, 36);
+}
+
+.section_title {
+    text-align: center;
+    font-size: 45px;
+    padding: 1em 2em;
+    color: rgb(242, 94, 107);
+    font-family: 'Vollkorn', serif;
+}
+
+.light_white {
+    color: #F7F8F6;
+}
+
+.dark_rose {
+    color: #660624;
+}
+
+
+
+
+/******** Butons *******/
+
+.btn {
+    border-radius: 10px;
+    padding: 20px 20px;
+    text-decoration: none;
+    transition-duration: 100ms;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 5px rgba(0, 0, 0);
+}
+
+.btn_rose {
+    margin: 20px;
+    background-color: #f25e6a;
+    color: #FFFFFF;
+}
+
+.btn_rose:hover {
+    background-color: #F7F8F6;
+    color: #f25e6a;
+}
+
+.btn_red {
+    margin-top: 2em;
+    background-color: #660624;
+    color: #FFFFFF;
+}
+
+.btn_red:hover {
+    background-color: #F7F8F6;
+    color: #660624;
+}
+
+/* specific rules for content elements ----------------------- */
+
+/*
+   Banner Hero-style  _ *********************** */
+.hero_banner {
+    background-image: url(../img/img.png);
+    max-width: 100%;
+    height: 90vh;
+    background-size: cover;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.hero_banner .overlay_color {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( to right, rgba(0, 0, 0, 0.99), #990d34, rgba(255, 0, 0, 0) 60%);
+}
+
+.hero_text {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 40%;
+    width: 100%;
+    color: #FFFFFF;
+    justify-content: center;
+    text-align: center;
+    align-self: flex-end;
+    padding-left: 7em;
+    padding-top: 15em;
+}
+
+.hero_text h1 {
+    margin: 0;
+    font-size: 6em;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.hero_text p {
+    font-weight: 300;
+    font-size: 1.8em;
+}
+
+.hero_text .btn {
+    margin-top: 40px;
+}
+
+.hero_text .btn:hover {
+    background-color: #F7F8F6;
+    color: #F25E6A;
+}
+
+
+/*================================================
+
+ ***************** Section #1 Intro   ***************
+
+=================================================
+*/
+.cards_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+.cards_flex>* {
+    margin-top: 10px;
+    min-width: 18ch;
+}
+
+.card_txt_overlay {
+    flex-basis: 47%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: start;
+    align-items: center;
+    padding: 1em;
+    opacity: .95;
+}
+
+.img_wrap {
+    max-width: 63vw;
+    max-height: 55vh;
+    display: block;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.img_overlay {
+    position: relative;
+}
+
+.card_txt_overlay:hover {
+    opacity: 1;
+}
+.card_txt_overlay:hover .img_wrap {
+    box-shadow: 0 0 10px rgba(0, 0, 0);
+}
+.txt_overlay {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    width: 100%;
+    font-size: 25px;
+    height: 150px;
+    text-align: center;
+    box-sizing: border-box;
+    justify-content: center;
+    border-radius: 0 0 20px 20px;
+}
+
+.txt_overlay h3 {
+    padding: 2em;
+}
+
+
+/*================================================
+
+ ***************** Section #2  ***************
+
+=================================================
+*/
+.three_col_flex {
+    flex-basis: 30%;
+}
+
+.card {
+    display: flex;
+    padding: 1em;
+    flex-basis: inherit;
+    flex-direction: column;
+    min-width: 25vh;
+}
+.card:hover{
+    transform: scale(1.01);
+}
+
+.card img {
+    border-radius: 0 0 10px 10px;
+    opacity: 0.9;
+}
+
+.card:hover img, .card:hover .textbox {
+    opacity: 1;
+
+}
+
+.card:hover .link_to_page {
+    font-weight: bolder;
+}
+
+.textbox {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 2em;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #FCDAB6;
+    opacity: 0.95;
+    text-align: center;
+}
+
+.textbox h3 {
+    font-size: 25px;
+    color: #660624;
+
+}
+
+.three_col_flex span {
+    padding: .5em;
+    color: rgba(235, 206, 206, 0.952);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.link_to_page {
+    font-size: 22px;
+    font-style: italic;
+    color: #f44336;
+}
+
+.link_to_page:hover {
+    text-decoration: underline;
+}
+
+
+/*================================================
+
+    ************** Section #3   ***************
+
+=================================================
+*/
+.card_horizontal {
+    padding: 20px;
+    border-radius: 5px;
+    min-height: 300px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card_img img {
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid #ebcece80;
+    box-sizing: border-box;
+}
+
+.card_img {
+    flex: 1;
+    padding: 2em;
+    min-width: 40vh;
+    opacity: 0.9;
+}
+
+.row:hover {
+    background-color: rgba(102, 6, 36, 0.9);
+}
+
+.row:hover .card_img {
+    transform: rotate(1deg);
+    opacity: 1;
+}
+
+.row:hover .card_img img {
+    border: 5px solid rgba(235, 206, 206, 0.502);
+}
+
+.card_horizontal_content {
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    flex: 1;
+    padding: 2em;
+    justify-content: center;
+    text-align: center;
+    color: #ebcecef3;
+    opacity: 0.8;
+}
+
+.row:hover .card_horizontal_content {
+    opacity: 1;
+}
+
+.title_big {
+    font-size: 48px;
+}
+
+.subtitle{
+    font-size: 20px;
+    padding: 40px;
+}
+
+.row {
+    background-color: #660624;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 2em;
+}
+
+
+/*================================================
+
+    ***************** Section #4   *************
+
+=================================================
+*/
+.cards_small_flex {
+    flex: 1 0 48%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    padding-bottom: 2em;
+}
+
+.card_small {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    flex-basis: 20%;
+    border-radius: 15px;
+    padding: 2em;
+    background-color: rgba(252, 218, 182, 0.4);
+}
+
+.card_small-img img {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card_small-img {
+    min-width: 20vh;
+    max-width: 25vw;
+    max-height: 25vh;
+    display: block;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0);
+    opacity: 0.95;
+}
+
+.card_content {
+    padding: 1em;
+    font-size: 22px;
+    color: #f44336;
+    text-align: center;
+}
+
+.card_small:hover .card_small-img {
+    background-image: linear-gradient( to right, rgba(189, 218, 213, 0.979), rgba(255, 0, 0, 0) 80%);
+    transform: rotate(1deg);
+    opacity: 1;
+}
+
+.card_small:hover .card_content {
+    color: #F25E6A;
+}
+
+
+
+
+/*======================================================
+
+ ***************** Section #2 - Portail ***************
+
+========================================================
+*/
+
+.filter-collection {
+    display: flex;
+    margin-bottom: 6rem;
+    padding-left: 5rem;
+    padding-right: 3rem;
+  }
+
+.filter-collection li {
+    list-style-type: none;
+}
+
+  /* Référence: https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111 */
+input[type="radio"] {
+    left: -9999px;
+    position: absolute;
+}
+
+/* FILTERS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.filtres {
+    display: flex;
+    flex-direction: column;
+    min-width: 14rem;
+    text-align: left;
+    padding: 1em;
+}
+
+.filtres label {
+    border-radius: 2rem;
+    cursor: pointer;
+    line-height: normal;
+    margin-bottom: 0.25rem;
+    min-width: 3.125rem;
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+}
+
+.filtres label:hover {
+    background-color: #FB7058;
+    color: #FCDAB6;
+}
+
+.filtres li {
+    list-style-type: none;
+    padding: 20px 0;
+}
+
+
+/* FILTERED ELEMENTS (POSTS)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.collection {
+    column-gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 2rem;
+}
+
+/* FILTERING RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+[value="All"]:checked ~ .filtres [for="All"],
+[value="Team1"]:checked ~ .filtres [for="Team1"],
+[value="Team2"]:checked ~ .filtres [for="Team2"],
+[value="Team3"]:checked ~ .filtres [for="Team3"],
+[value="Team4"]:checked ~ .filtres [for="Team4"],
+[value="Team5"]:checked ~ .filtres [for="Team5"],
+[value="Ursidés"]:checked ~ .filtres [for="Ursidés"] {
+background-color: var(--green);
+color: var(--white);
+}
+
+[value="All"]:checked ~ .collection [data-category] {
+display: block;
+}
+
+[value="Team1"]:checked
+~ .collection
+.sticker:not([data-category~="Team1"]),
+[value="Team2"]:checked ~ .collection .sticker:not([data-category~="Team2"]),
+[value="Team3"]:checked ~ .collection .sticker:not([data-category~="Team3"]),
+[value="Team4"]:checked ~ .collection .sticker:not([data-category~="Team4"]),
+[value="Team5"]:checked
+~ .collection
+.sticker:not([data-category~="Team5"]),
+[value="Ursidés"]:checked ~ .collection .sticker:not([data-category~="Ursidés"]) {
+display: none;
+}
+
+  /* hide title*/
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+
