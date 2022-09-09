@@ -1,0 +1,228 @@
+/* ***************** Header  ****************/
+
+.main_header {
+    padding: 2em;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 10;
+    background-color: rgb(102, 6, 36);
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), #660624);
+    box-sizing: border-box;
+}
+
+.logo {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    max-width: 150px;
+    min-width: 130px;
+    padding: 30px;
+}
+
+.logo a:hover {
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.7;
+}
+
+.top_nav {
+    margin-right: auto;
+}
+
+.top_nav a {
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.top_nav_links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top_nav_links li {
+    display: inline-block;
+    position: relative;
+}
+
+.top_nav_links li a {
+    transition: all 200ms ease-in-out 0s;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.menu_item>a {
+    text-transform: uppercase;
+}
+
+.top_nav_submenu li a {
+    font-weight: 600;
+}
+
+.top_nav_links li a:hover {
+    color: #ffff;
+    background-color: #fccece1a;
+}
+
+.top_nav_submenu {
+    background-color: rgb(242, 94, 106);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(247, 248, 246, 0.719));
+    display: none;
+    position: absolute;
+    visibility: hidden;
+    padding-bottom: 10px;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.submenu_item {
+    width: 100%;
+}
+
+.submenu_item a {
+    margin: 0px;
+}
+
+.submenu_item a:hover {
+    background-color: rgba(255, 255, 255, 0.616);
+}
+
+.menu_item.with_submenu:hover .top_nav_submenu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.header_btn {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 16px;
+    background: #F25E6A;
+    display: inline-block;
+    padding: 20px 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition-duration: 100ms;
+    margin: 0 30px;
+}
+
+.header_btn:hover, .header_btn:focus {
+    background: #F7F8F6;
+    color: #F25E6A;
+    transform: scale(1.02);
+}
+
+/* *********************** Hamburger button  *********************** */
+
+.hamburger_menu {
+    cursor: pointer;
+    font-size: 18px;
+    right: 0;
+    top: 0;
+    margin: 0 20px;
+}
+
+.hamburger_menu_btn {
+    margin: 0 auto;
+    padding: 0.3em;
+    transition: all 200ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+}
+
+.burger_bar {
+    width: 70%;
+    height: 5px;
+    background-color: #FFFFFF;
+    margin: 6px auto;
+    align-self: center;
+}
+
+/* Hamburger button change 3 lines to X */
+
+.hamburger_menu_btn_active:hover .burger_bar_top {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger_menu_btn_active:hover .burger_bar_middle {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.hamburger_menu_btn_active:hover .burger_bar_bottom {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+/* *********************** Dropdown Menu *********************** */
+
+.hidden_menu {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    min-width: 20em;
+    background-color: #660624;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), #D24A5A);
+    border-radius: 10px 0 0 10px;
+    transition: opacity 150ms;
+    color: #FFFFFF;
+}
+
+.hidden_menu a {
+    margin: .2em;
+    padding: .3em 1em;
+    display: block;
+    transition-duration: 200ms;
+    transition-property: background-color;
+    font-size: 18px;
+    color: #ebcece80;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.hidden_menu a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hidden_menu h2 {
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+.hidden_menu .fa {
+    margin-right: 10px;
+    color: #F25E6A;
+}
+
+.hamburger_menu_btn_active:hover .hidden_menu {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    justify-content: flex-start;
+    transition-timing-function: ease-in;
+}
+
+.drop-button:focus {
+    border: none;
+    outline: none;
+}
+
+.menu_categories {
+    padding: 20px 0;
+}
+
+.menu_categories:not(:nth-child(1)) {
+    border-top: 2px solid rgba(235, 206, 206, 0.502);
+}
